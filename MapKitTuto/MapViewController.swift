@@ -34,4 +34,18 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController : MKMapViewDelegate {
+    public static let appleStoreIdentifier = "ASI"
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let view = mapView.dequeueReusableAnnotationView(withIdentifier: MapViewController.appleStoreIdentifier)
+        if let reused = view {
+            reused.annotation = annotation
+        } else { // si l'annotation view n'existe pas
+            let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: MapViewController.appleStoreIdentifier)
+            pinAnnotation.canShowCallout = true
+            pinAnnotation.pinTintColor = .yellow
+            return pinAnnotation
+        }
+        return view
+    }
 }
