@@ -26,6 +26,10 @@ class NewAppleStoreViewController: UIViewController {
         nameLabel.text = NSLocalizedString("controllers.new_apple_store.name_label", comment: "")
         latitudeLabel.text = NSLocalizedString("controllers.new_apple_store.latitude_label", comment: "")
         longitudeLabel.text = NSLocalizedString("controllers.new_apple_store.longitude_label", comment: "")
+        
+        self.nameTextField.delegate = self
+        self.latitudeTextField.delegate = self
+        self.longitudeTextField.delegate = self
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -41,4 +45,11 @@ class NewAppleStoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension NewAppleStoreViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
