@@ -23,6 +23,12 @@ class MapViewController: UIViewController {
             self.locationManager = manager
         }
         self.mapView.delegate = self
+        
+        let opera = MKPointAnnotation()
+        opera.coordinate = .init(latitude: 48.8725125, longitude: 2.3311423)
+        opera.title = "Apple Store"
+        opera.subtitle = "Ouverture 8h-22h"
+        self.mapView.addAnnotation(opera)
     }
 
 }
