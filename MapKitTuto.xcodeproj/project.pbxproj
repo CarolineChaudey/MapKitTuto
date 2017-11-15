@@ -12,6 +12,7 @@
 		EC31C8551FBC779D000EE8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC31C8531FBC779D000EE8BF /* LaunchScreen.storyboard */; };
 		EC31C85E1FBC77DD000EE8BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C85C1FBC77DD000EE8BF /* MapViewController.swift */; };
 		EC31C85F1FBC77DD000EE8BF /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC31C85D1FBC77DD000EE8BF /* MapViewController.xib */; };
+		EC31C8621FBC794F000EE8BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC31C8611FBC794F000EE8BF /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EC31C8561FBC779E000EE8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC31C85C1FBC77DD000EE8BF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EC31C85D1FBC77DD000EE8BF /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		EC31C8611FBC794F000EE8BF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC31C8621FBC794F000EE8BF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				EC31C8491FBC779D000EE8BF /* MapKitTuto */,
 				EC31C8481FBC779D000EE8BF /* Products */,
+				EC31C8601FBC794E000EE8BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				EC31C85D1FBC77DD000EE8BF /* MapViewController.xib */,
 			);
 			path = MapKitTuto;
+			sourceTree = "<group>";
+		};
+		EC31C8601FBC794E000EE8BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC31C8611FBC794F000EE8BF /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +109,11 @@
 					EC31C8461FBC779D000EE8BF = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
