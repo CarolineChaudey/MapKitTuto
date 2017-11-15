@@ -25,11 +25,6 @@ class MapViewController: UIViewController {
         self.mapView.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 
 extension MapViewController : MKMapViewDelegate {
