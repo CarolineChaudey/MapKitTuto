@@ -16,6 +16,8 @@
 		EC31C8651FBC8D31000EE8BF /* NewAppleStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C8631FBC8D31000EE8BF /* NewAppleStoreViewController.swift */; };
 		EC31C8661FBC8D31000EE8BF /* NewAppleStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC31C8641FBC8D31000EE8BF /* NewAppleStoreViewController.xib */; };
 		EC31C8691FBC9195000EE8BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC31C86B1FBC9195000EE8BF /* Localizable.strings */; };
+		EC31C8701FBC9E94000EE8BF /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */; };
+		EC31C8711FBC9E94000EE8BF /* PortraitNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		EC31C86A1FBC9195000EE8BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC31C86C1FBC91D6000EE8BF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EC31C86D1FBC91D6000EE8BF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
+		EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortraitNavigationController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				EC31C85D1FBC77DD000EE8BF /* MapViewController.xib */,
 				EC31C8631FBC8D31000EE8BF /* NewAppleStoreViewController.swift */,
 				EC31C8641FBC8D31000EE8BF /* NewAppleStoreViewController.xib */,
+				EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */,
+				EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */,
 			);
 			path = MapKitTuto;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 				EC31C8661FBC8D31000EE8BF /* NewAppleStoreViewController.xib in Resources */,
 				EC31C8551FBC779D000EE8BF /* LaunchScreen.storyboard in Resources */,
 				EC31C85F1FBC77DD000EE8BF /* MapViewController.xib in Resources */,
+				EC31C8711FBC9E94000EE8BF /* PortraitNavigationController.xib in Resources */,
 				EC31C8521FBC779D000EE8BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +176,7 @@
 			files = (
 				EC31C84B1FBC779D000EE8BF /* AppDelegate.swift in Sources */,
 				EC31C85E1FBC77DD000EE8BF /* MapViewController.swift in Sources */,
+				EC31C8701FBC9E94000EE8BF /* PortraitNavigationController.swift in Sources */,
 				EC31C8651FBC8D31000EE8BF /* NewAppleStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

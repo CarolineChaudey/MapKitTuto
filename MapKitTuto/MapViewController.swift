@@ -39,7 +39,7 @@ class MapViewController: UIViewController {
 
     @IBAction func touchNewAppleStore() {
         let appleStoreViewComponent = NewAppleStoreViewController()
-        self.present(UINavigationController(rootViewController: appleStoreViewComponent), animated: true)
+        self.present(PortraitNavigationController(rootViewController: appleStoreViewComponent), animated: true)
     }
 }
 

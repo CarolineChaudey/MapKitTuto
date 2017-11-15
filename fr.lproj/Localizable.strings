@@ -6,4 +6,7 @@
   Copyright © 2017 caro. All rights reserved.
 */
 
-"controllers.new_apple_store_title" = "Nouvel  Store";
+"controllers.new_apple_store.title" = "Nouvel  Store";
+"controllers.new_apple_store.name_label" = "Nom";
+"controllers.new_apple_store.latitude_label" = "Latitude";
+"controllers.new_apple_store.longitude_label" = "Longitude";
