@@ -37,6 +37,10 @@ class MapViewController: UIViewController {
         self.mapView.addAnnotations([opera, louvre])
     }
 
+    @IBAction func touchNewAppleStore() {
+        let appleStoreViewComponent = NewAppleStoreViewController()
+        self.present(UINavigationController(rootViewController: appleStoreViewComponent), animated: true)
+    }
 }
 
 extension MapViewController : MKMapViewDelegate {
