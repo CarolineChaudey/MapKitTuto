@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		EC31C84B1FBC779D000EE8BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C84A1FBC779D000EE8BF /* AppDelegate.swift */; };
-		EC31C84D1FBC779D000EE8BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C84C1FBC779D000EE8BF /* ViewController.swift */; };
-		EC31C8501FBC779D000EE8BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC31C84E1FBC779D000EE8BF /* Main.storyboard */; };
 		EC31C8521FBC779D000EE8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC31C8511FBC779D000EE8BF /* Assets.xcassets */; };
 		EC31C8551FBC779D000EE8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC31C8531FBC779D000EE8BF /* LaunchScreen.storyboard */; };
+		EC31C85E1FBC77DD000EE8BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C85C1FBC77DD000EE8BF /* MapViewController.swift */; };
+		EC31C85F1FBC77DD000EE8BF /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC31C85D1FBC77DD000EE8BF /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC31C8471FBC779D000EE8BF /* MapKitTuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitTuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC31C84A1FBC779D000EE8BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC31C84C1FBC779D000EE8BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC31C84F1FBC779D000EE8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC31C8511FBC779D000EE8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC31C8541FBC779D000EE8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC31C8561FBC779E000EE8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC31C85C1FBC77DD000EE8BF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EC31C85D1FBC77DD000EE8BF /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				EC31C84A1FBC779D000EE8BF /* AppDelegate.swift */,
-				EC31C84C1FBC779D000EE8BF /* ViewController.swift */,
-				EC31C84E1FBC779D000EE8BF /* Main.storyboard */,
 				EC31C8511FBC779D000EE8BF /* Assets.xcassets */,
 				EC31C8531FBC779D000EE8BF /* LaunchScreen.storyboard */,
 				EC31C8561FBC779E000EE8BF /* Info.plist */,
+				EC31C85C1FBC77DD000EE8BF /* MapViewController.swift */,
+				EC31C85D1FBC77DD000EE8BF /* MapViewController.xib */,
 			);
 			path = MapKitTuto;
 			sourceTree = "<group>";
@@ -124,8 +124,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC31C8551FBC779D000EE8BF /* LaunchScreen.storyboard in Resources */,
+				EC31C85F1FBC77DD000EE8BF /* MapViewController.xib in Resources */,
 				EC31C8521FBC779D000EE8BF /* Assets.xcassets in Resources */,
-				EC31C8501FBC779D000EE8BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +136,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC31C84D1FBC779D000EE8BF /* ViewController.swift in Sources */,
 				EC31C84B1FBC779D000EE8BF /* AppDelegate.swift in Sources */,
+				EC31C85E1FBC77DD000EE8BF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EC31C84E1FBC779D000EE8BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC31C84F1FBC779D000EE8BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC31C8531FBC779D000EE8BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
