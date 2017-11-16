@@ -20,13 +20,25 @@ class MainStoreViewController: UIViewController {
         return StoreListViewController()
     }()
     
+    public var visibleViewControler: UIViewController {
+        if self.mapViewController.view.window != nil {
+            return self.mapViewController
+        }
+        return self.listViewController
+    }
     
     @IBAction func switchButton() {
         UIView.beginAnimations("flip_animation", context: nil)
         UIView.setAnimationTransition(.flipFromRight, for: self.childContentView, cache: false)
-        UIView.setAnimationDuration(3)
-        self.removeChildController(self.mapViewController)
-        self.addChildViewController(self.listViewController, in: self.childContentView)
+        UIView.setAnimationDuration(2)
+        
+        let visible = self.visibleViewControler
+        self.removeVisibleChildController(visible)
+        if visible == self.mapViewController {
+            self.addChildViewController(self.listViewController, in: self.childContentView)
+        } else {
+            self.addChildViewController(self.mapViewController, in: self.childContentView)
+        }
         UIView.commitAnimations()
     }
     
@@ -46,7 +58,7 @@ class MainStoreViewController: UIViewController {
         self.addChildViewController(childViewController)
     }
     
-    func removeChildController(_ childController: UIViewController) {
+    func removeVisibleChildController(_ childController: UIViewController) {
         childController.removeFromParentViewController()
         childController.view.removeFromSuperview()
     }
