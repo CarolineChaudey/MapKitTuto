@@ -27,6 +27,12 @@ class MainStoreViewController: UIViewController {
         return self.listViewController
     }
     
+    @IBAction func touchNewAppleStore() {
+        let appleStoreViewComponent = NewAppleStoreViewController()
+        appleStoreViewComponent.delegate = self
+        self.present(PortraitNavigationController(rootViewController: appleStoreViewComponent), animated: true)
+    }
+    
     @IBAction func switchButton() {
         UIView.beginAnimations("flip_animation", context: nil)
         UIView.setAnimationTransition(.flipFromRight, for: self.childContentView, cache: false)
@@ -61,5 +67,11 @@ class MainStoreViewController: UIViewController {
     func removeVisibleChildController(_ childController: UIViewController) {
         childController.removeFromParentViewController()
         childController.view.removeFromSuperview()
+    }
+}
+
+extension MainStoreViewController: NewAppleStoreViewControllerDelegate {
+    func newAppleStoreViewController(_newAppleStoreViewController: NewAppleStoreViewController, didCreateStore store: Store) {
+        _newAppleStoreViewController.dismiss(animated: true)
     }
 }

@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet var mapView: MKMapView!
     var locationManager: CLLocationManager!
+    weak var storeProvider: StoreProvider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,10 @@ class MapViewController: UIViewController {
             self.locationManager = manager
         }
         self.mapView.delegate = self
-    }
-
-    @IBAction func touchNewAppleStore() {
-        let appleStoreViewComponent = NewAppleStoreViewController()
-        appleStoreViewComponent.delegate = self
-        self.present(PortraitNavigationController(rootViewController: appleStoreViewComponent), animated: true)
+        
+        if let stores = self.storeProvider?.stores {
+            self.mapView.addAnnotations(stores.map{ $0.annotation })
+        }
     }
 }
 

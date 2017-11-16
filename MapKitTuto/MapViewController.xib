@@ -24,18 +24,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </mapView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPe-Kn-i5s">
-                    <rect key="frame" x="333" y="625" width="22" height="22"/>
-                    <connections>
-                        <action selector="touchNewAppleStore" destination="-1" eventType="touchUpInside" id="6cl-Zd-1f1"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="DPe-Kn-i5s" secondAttribute="bottom" constant="20" id="ZlK-Dq-mPI"/>
-                <constraint firstAttribute="trailing" secondItem="DPe-Kn-i5s" secondAttribute="trailing" constant="20" id="qgf-nv-Pej"/>
-            </constraints>
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
