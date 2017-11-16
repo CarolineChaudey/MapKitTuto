@@ -18,6 +18,7 @@
 		EC31C8691FBC9195000EE8BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC31C86B1FBC9195000EE8BF /* Localizable.strings */; };
 		EC31C8701FBC9E94000EE8BF /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */; };
 		EC31C8711FBC9E94000EE8BF /* PortraitNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */; };
+		EC4ADA731FBD8CD900D61105 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4ADA721FBD8CD900D61105 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EC31C86D1FBC91D6000EE8BF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
 		EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortraitNavigationController.xib; sourceTree = "<group>"; };
+		EC4ADA721FBD8CD900D61105 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				EC31C8641FBC8D31000EE8BF /* NewAppleStoreViewController.xib */,
 				EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */,
 				EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */,
+				EC4ADA721FBD8CD900D61105 /* Store.swift */,
 			);
 			path = MapKitTuto;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4ADA731FBD8CD900D61105 /* Store.swift in Sources */,
 				EC31C84B1FBC779D000EE8BF /* AppDelegate.swift in Sources */,
 				EC31C85E1FBC77DD000EE8BF /* MapViewController.swift in Sources */,
 				EC31C8701FBC9E94000EE8BF /* PortraitNavigationController.swift in Sources */,

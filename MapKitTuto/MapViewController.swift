@@ -39,7 +39,25 @@ class MapViewController: UIViewController {
 
     @IBAction func touchNewAppleStore() {
         let appleStoreViewComponent = NewAppleStoreViewController()
+        appleStoreViewComponent.delegate = self
         self.present(PortraitNavigationController(rootViewController: appleStoreViewComponent), animated: true)
+    }
+}
+
+extension MapViewController: NewAppleStoreViewControllerDelegate {
+    func newAppleStoreViewController(_newAppleStoreViewController: NewAppleStoreViewController, didCreateStore store: Store) {
+        _newAppleStoreViewController.dismiss(animated: true) {
+            self.mapView.addAnnotation(store.annotation)
+        }
+    }
+}
+
+extension Store {
+    public var annotation: MKAnnotation {
+        let pointAnnotation = MKPointAnnotation()
+        pointAnnotation.title = self.name
+        pointAnnotation.coordinate = self.coordinate
+        return pointAnnotation
     }
 }
 

@@ -10,3 +10,7 @@
 "controllers.new_apple_store.name_label" = "Nom";
 "controllers.new_apple_store.latitude_label" = "Latitude";
 "controllers.new_apple_store.longitude_label" = "Longitude";
+
+"app.vocabulary.error_title" = "Erreur";
+"app.vocabulary.error_message" = "Champs manquants";
+"app.vocabulary.close" = "fermer";
