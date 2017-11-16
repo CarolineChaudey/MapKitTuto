@@ -29,6 +29,16 @@ class MapViewController: UIViewController {
             self.mapView.addAnnotations(stores.map{ $0.annotation })
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.mapView.removeAnnotations(self.mapView.annotations)
+        if let stores = self.storeProvider?.stores {
+            self.mapView.addAnnotations(stores.map { store in
+                return store.annotation
+            })
+        }
+    }
 }
 
 extension MapViewController: NewAppleStoreViewControllerDelegate {

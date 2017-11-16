@@ -8,12 +8,16 @@
 
 import UIKit
 
-class MainStoreViewController: UIViewController {
+class MainStoreViewController: UIViewController, StoreProvider {
 
     @IBOutlet weak var childContentView: UIView!
     
+    var stores: [Store] = []
+    
     lazy var mapViewController: MapViewController = { // lazy ne va exécuter la méthode qu'une seule fois
-        return MapViewController()
+        let mapViewController = MapViewController()
+        mapViewController.storeProvider = self
+        return mapViewController
     }()
     
     lazy var listViewController: StoreListViewController = {
@@ -72,6 +76,7 @@ class MainStoreViewController: UIViewController {
 
 extension MainStoreViewController: NewAppleStoreViewControllerDelegate {
     func newAppleStoreViewController(_newAppleStoreViewController: NewAppleStoreViewController, didCreateStore store: Store) {
+        self.stores.append(store)
         _newAppleStoreViewController.dismiss(animated: true)
     }
 }
