@@ -23,18 +23,6 @@ class MapViewController: UIViewController {
             self.locationManager = manager
         }
         self.mapView.delegate = self
-        
-        let opera = MKPointAnnotation()
-        opera.coordinate = .init(latitude: 48.8725125, longitude: 2.3311423)
-        opera.title = "Apple Store"
-        opera.subtitle = "Ouverture 8h-22h"
-        
-        let louvre = MKPointAnnotation()
-        louvre.coordinate = .init(latitude: 48.8629555, longitude: 2.3322693)
-        louvre.title = "Le Louvres"
-        louvre.subtitle = "Ouverture 8h-22h"
-        
-        self.mapView.addAnnotations([opera, louvre])
     }
 
     @IBAction func touchNewAppleStore() {
