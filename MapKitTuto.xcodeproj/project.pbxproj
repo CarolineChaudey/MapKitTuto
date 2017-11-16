@@ -19,6 +19,10 @@
 		EC31C8701FBC9E94000EE8BF /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */; };
 		EC31C8711FBC9E94000EE8BF /* PortraitNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */; };
 		EC4ADA731FBD8CD900D61105 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4ADA721FBD8CD900D61105 /* Store.swift */; };
+		EC4ADA761FBDA2C600D61105 /* MainStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4ADA741FBDA2C600D61105 /* MainStoreViewController.swift */; };
+		EC4ADA771FBDA2C600D61105 /* MainStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4ADA751FBDA2C600D61105 /* MainStoreViewController.xib */; };
+		EC4ADA7A1FBDA84D00D61105 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4ADA781FBDA84D00D61105 /* StoreListViewController.swift */; };
+		EC4ADA7B1FBDA84D00D61105 /* StoreListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4ADA791FBDA84D00D61105 /* StoreListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
 		EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortraitNavigationController.xib; sourceTree = "<group>"; };
 		EC4ADA721FBD8CD900D61105 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		EC4ADA741FBDA2C600D61105 /* MainStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoreViewController.swift; sourceTree = "<group>"; };
+		EC4ADA751FBDA2C600D61105 /* MainStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainStoreViewController.xib; sourceTree = "<group>"; };
+		EC4ADA781FBDA84D00D61105 /* StoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
+		EC4ADA791FBDA84D00D61105 /* StoreListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,10 @@
 				EC31C86E1FBC9E94000EE8BF /* PortraitNavigationController.swift */,
 				EC31C86F1FBC9E94000EE8BF /* PortraitNavigationController.xib */,
 				EC4ADA721FBD8CD900D61105 /* Store.swift */,
+				EC4ADA741FBDA2C600D61105 /* MainStoreViewController.swift */,
+				EC4ADA751FBDA2C600D61105 /* MainStoreViewController.xib */,
+				EC4ADA781FBDA84D00D61105 /* StoreListViewController.swift */,
+				EC4ADA791FBDA84D00D61105 /* StoreListViewController.xib */,
 			);
 			path = MapKitTuto;
 			sourceTree = "<group>";
@@ -162,8 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC31C8691FBC9195000EE8BF /* Localizable.strings in Resources */,
+				EC4ADA771FBDA2C600D61105 /* MainStoreViewController.xib in Resources */,
 				EC31C8661FBC8D31000EE8BF /* NewAppleStoreViewController.xib in Resources */,
 				EC31C8551FBC779D000EE8BF /* LaunchScreen.storyboard in Resources */,
+				EC4ADA7B1FBDA84D00D61105 /* StoreListViewController.xib in Resources */,
 				EC31C85F1FBC77DD000EE8BF /* MapViewController.xib in Resources */,
 				EC31C8711FBC9E94000EE8BF /* PortraitNavigationController.xib in Resources */,
 				EC31C8521FBC779D000EE8BF /* Assets.xcassets in Resources */,
@@ -177,11 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4ADA7A1FBDA84D00D61105 /* StoreListViewController.swift in Sources */,
 				EC4ADA731FBD8CD900D61105 /* Store.swift in Sources */,
 				EC31C84B1FBC779D000EE8BF /* AppDelegate.swift in Sources */,
 				EC31C85E1FBC77DD000EE8BF /* MapViewController.swift in Sources */,
 				EC31C8701FBC9E94000EE8BF /* PortraitNavigationController.swift in Sources */,
 				EC31C8651FBC8D31000EE8BF /* NewAppleStoreViewController.swift in Sources */,
+				EC4ADA761FBDA2C600D61105 /* MainStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
