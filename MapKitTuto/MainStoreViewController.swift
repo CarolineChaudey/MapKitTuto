@@ -20,8 +20,10 @@ class MainStoreViewController: UIViewController, StoreProvider {
         return mapViewController
     }()
     
-    lazy var listViewController: StoreListViewController = {
-        return StoreListViewController()
+    lazy var listViewController: StoreListViewController = { // lazy ne va exécuter la méthode qu'une seule fois
+        let listViewController = StoreListViewController()
+        listViewController.storeProvider = self
+        return listViewController
     }()
     
     public var visibleViewControler: UIViewController {
