@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var managedObjectContext: NSManagedObjectContext?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = MainStoreViewController()
         window.makeKeyAndVisible()
         self.window = window
+        
+        self.managedObjectContext = self.loadContext()
         
         return true
     }
@@ -45,7 +48,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    // Core Data stack
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "LocationModel")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
+    // Core data saving support
+    
+    func saveContext() {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
 
 }
 
+extension AppDelegate {
+    func loadContext() -> NSManagedObjectContext? {
+        guard
+            let schemaURL = Bundle.main.url(forResource: "LocationModel", withExtension: "momd"),
+            let model = NSManagedObjectModel(contentsOf: schemaURL)
+        else {
+            return nil
+        }
+        let store = NSPersistentStoreCoordinator(managedObjectModel: model)
+        guard
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        else {
+            return nil
+        }
+        let storageURL = documentDirectory.appendingPathComponent("mySuper.db")
+        print(storageURL)
+        _ = try? store.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storageURL, options: nil)
+        let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        context.persistentStoreCoordinator = store
+        return context
+    }
+}
