@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82E0F3591FDC225C00021BF2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E0F3581FDC223500021BF2 /* CoreData.framework */; };
+		82E0F35C1FDC22B800021BF2 /* LocationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82E0F35A1FDC22B800021BF2 /* LocationModel.xcdatamodeld */; };
 		EC31C84B1FBC779D000EE8BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31C84A1FBC779D000EE8BF /* AppDelegate.swift */; };
 		EC31C8521FBC779D000EE8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC31C8511FBC779D000EE8BF /* Assets.xcassets */; };
 		EC31C8551FBC779D000EE8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC31C8531FBC779D000EE8BF /* LaunchScreen.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82E0F3581FDC223500021BF2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		82E0F35B1FDC22B800021BF2 /* LocationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationModel.xcdatamodel; sourceTree = "<group>"; };
 		EC31C8471FBC779D000EE8BF /* MapKitTuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitTuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC31C84A1FBC779D000EE8BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC31C8511FBC779D000EE8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E0F3591FDC225C00021BF2 /* CoreData.framework in Frameworks */,
 				EC31C8621FBC794F000EE8BF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +110,7 @@
 				ECFC610C1FD8325E000BB111 /* StoreCollectionViewCell.swift */,
 				EC4ADA791FBDA84D00D61105 /* StoreListViewController.xib */,
 				EC4ADA7C1FBDB01E00D61105 /* StoreProvider.swift */,
+				82E0F35A1FDC22B800021BF2 /* LocationModel.xcdatamodeld */,
 			);
 			path = MapKitTuto;
 			sourceTree = "<group>";
@@ -112,6 +118,7 @@
 		EC31C8601FBC794E000EE8BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82E0F3581FDC223500021BF2 /* CoreData.framework */,
 				EC31C8611FBC794F000EE8BF /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -209,6 +216,7 @@
 				EC31C8701FBC9E94000EE8BF /* PortraitNavigationController.swift in Sources */,
 				EC31C8651FBC8D31000EE8BF /* NewAppleStoreViewController.swift in Sources */,
 				EC4ADA7D1FBDB01E00D61105 /* StoreProvider.swift in Sources */,
+				82E0F35C1FDC22B800021BF2 /* LocationModel.xcdatamodeld in Sources */,
 				EC4ADA761FBDA2C600D61105 /* MainStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +404,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		82E0F35A1FDC22B800021BF2 /* LocationModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				82E0F35B1FDC22B800021BF2 /* LocationModel.xcdatamodel */,
+			);
+			currentVersion = 82E0F35B1FDC22B800021BF2 /* LocationModel.xcdatamodel */;
+			path = LocationModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EC31C83F1FBC779D000EE8BF /* Project object */;
 }
