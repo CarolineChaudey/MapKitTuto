@@ -78,7 +78,14 @@ class MainStoreViewController: UIViewController, StoreProvider {
 
 extension MainStoreViewController: NewAppleStoreViewControllerDelegate {
     func newAppleStoreViewController(_newAppleStoreViewController: NewAppleStoreViewController, didCreateStore store: Store) {
-        self.stores.append(store)
+        //self.stores.append(store)
+        let context = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+        let storeData = StoreEntity(context: context!)
+        storeData.name = store.name
+        storeData.latitude = store.coordinate.latitude
+        storeData.longitude = store.coordinate.longitude
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
         _newAppleStoreViewController.dismiss(animated: true)
     }
 }

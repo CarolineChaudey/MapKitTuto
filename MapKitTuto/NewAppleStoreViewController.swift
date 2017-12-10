@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-public protocol NewAppleStoreViewControllerDelegate: class { //
+public protocol NewAppleStoreViewControllerDelegate: class {
     func newAppleStoreViewController(_newAppleStoreViewController: NewAppleStoreViewController, didCreateStore store: Store)
 }
 
@@ -52,7 +52,8 @@ public class NewAppleStoreViewController: UIViewController {
             let latitude = latitudeTextField.text,
             let lat = Double(latitude),
             let longitude = longitudeTextField.text,
-            let long = Double(longitude) else {
+            let long = Double(longitude)
+        else {
                 let alert = UIAlertController(title: NSLocalizedString("app.vocabulary.error_title", comment: ""),
                                                 message: NSLocalizedString("app.vocabulary.error_message", comment: ""),
                                                 preferredStyle: .actionSheet)
@@ -60,7 +61,7 @@ public class NewAppleStoreViewController: UIViewController {
                                     style: .cancel))
                 self.present(alert, animated: true)
                 return
-            }
+        }
         let store = Store(name: name, coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long))
         self.delegate?.newAppleStoreViewController(_newAppleStoreViewController: self, didCreateStore: store)
     }

@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import CoreData
 
 public class Store {
     public let name: String
